@@ -38,7 +38,7 @@ class FindRecipe extends Component {
     onButtonSubmit = () => {
         this.setState({...this.state, isFetching: true});
         this.setState({imageUrl: this.state.input});
-        fetch('http://127.0.0.1:5000/imageurl', {
+        fetch('https://trythat.herokuapp.com/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
