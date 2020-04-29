@@ -13,9 +13,6 @@ app.use(cors());
 
 require('./controllers/food')(app,fs);
 
-app.get('/', (req, res)=> {
-    res.send('Working');
-    });
 
 app.post('/imageurl', (req, res) => {image.handleApi(req,res)})
 
