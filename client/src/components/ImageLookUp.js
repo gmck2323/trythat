@@ -3,6 +3,7 @@ import ingpic from './images/ingredients-2.jpg';
 import LookUp from './LookUpForm/LookUpForm';
 import RenderIngredients from './LookUpForm/RenderIngredients';
 import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
 
 
 
@@ -14,6 +15,13 @@ const initialState = {
     isFetching: false
   }
 
+const styles = theme => ({
+    img: {
+      display: 'flex',
+      margin: 'auto'
+    },
+  });  
+ 
 
 class FindRecipe extends Component {
     constructor(){
@@ -58,15 +66,18 @@ class FindRecipe extends Component {
     }
 
     
+
+    
     render(){
     const {imageUrl, ingredients, isFetching} = this.state;
+    const { classes } = this.props;
     return(
         <Grid container justify="center" alignItems="center" style = {{textAlign: "center"}}>
             <Grid item xs={12}>
-                <img alt="ingredients" src={ingpic}/>
-                <h1>What is this?</h1>
+                <img alt="ingredients" src={ingpic} className={classes.img}/>
             </Grid>
             <Grid item xs={12}>
+            <h1>What is this?</h1>
                 <LookUp onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} imageUrl={imageUrl}/>
             </Grid>
             <Grid item xs={12}>
@@ -77,4 +88,4 @@ class FindRecipe extends Component {
 }
 };
 
-export default FindRecipe
+export default withStyles(styles, {withTheme: true})(FindRecipe);

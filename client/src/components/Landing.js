@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom';
 import gdimg from './images/group-dinner.jpg';
 import hero from './images/pizza-drink.jpg';
 import drinks from './images/drinks.jpg';
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   }));  
 
 const Landing = () => {
-    const classes = useStyles();
+    const classes = useStyles(); 
     return (
         <div>
             <Grid container spacing={4} justify="center" alignItems="center" style = {{textAlign: "center"}}>
@@ -37,14 +38,17 @@ const Landing = () => {
                 <Grid item xs={12} sm={6}>
                     <Paper elevation={0} style={{margin: "auto"}}>
                         <h1>Sample text here.</h1>
-                        <h2>What do we want to talk about.
-                        Probably something along the lines of - Hey! Do you 
-                        ever have this problem? This app is how you can solve it. 
+                        <h2>Have ingredients but don't know how to use them.
+                            Let us help! With multiple options for cuisines and
+                             dietary restrictions. We'll be sure to help you find
+                             a great meal! 
                         </h2>
                     </Paper>
+                    <Link to="/find-recipe">
                     <Button variant="contained" color="primary">
-                    Primary
+                    Use My Ingredients
                     </Button>
+                    </Link>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
@@ -66,11 +70,13 @@ const Landing = () => {
                 <Grid item xs={12} sm={6}>
                     <Paper elevation={0}><h1>What is in this?
                     </h1><h2>Utilizing Ai we can figure out some core ingredients by picture
-                    or if you don't know what an ingredient is. Check it out here!
-                    More sample text to follow</h2></Paper>
+                    or if you don't know what an ingredient is or what a picture of a dish. 
+                    Most likely contains.</h2></Paper>
+                    <Link to="/what-is-this">
                     <Button variant="contained" color="primary">
-                    Primary
+                    Curious?
                     </Button>
+                    </Link>
                 </Grid>
             </Grid>    
             </div>

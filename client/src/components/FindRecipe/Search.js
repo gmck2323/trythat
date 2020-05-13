@@ -87,7 +87,7 @@ export default function Search(){
         <h2>Let's Find A Great Recipe!</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="search-bar">
-            <h3 marginBottom="10px">Ingredients</h3>
+            <h3 style = {{marginBottom: "10px"}}>Ingredients</h3>
           <Controller
             as={<Select components={animatedComponents}
             isMulti
@@ -101,7 +101,7 @@ export default function Search(){
           />
           </div>
           <div className="search-bar">
-          <h3 marginBottom="10px">Cuisines</h3>
+          <h3 style = {{marginBottom: "10px"}}>Cuisines</h3>
           <Controller
             as={<Select components={animatedComponents}
             isMulti
@@ -115,7 +115,7 @@ export default function Search(){
           />
           </div>
           <div className="search-bar"> 
-          <h3 marginBottom="10px">Diets</h3>
+          <h3 style = {{marginBottom: "10px"}}>Diets</h3>
           <Controller
             as={<Select components={animatedComponents}
             isMulti

@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import logo from './images/logo_transparent.png';
+import {Link} from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
@@ -41,7 +42,7 @@ export default function Header() {
                         </Grid>
                         <Grid item xs={7}>
                           <div style={{position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
-                        <img src={logo} style={{maxHeight: '100px', textAlign: 'center', margin: 'auto'}}alt="logo" />
+                        <Link to="/"><img src={logo} style={{maxHeight: '100px', textAlign: 'center', margin: 'auto'}}alt="logo" /></Link>
                         </div>
                         </Grid>
                         <Grid item xs={2}>

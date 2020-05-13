@@ -3,6 +3,8 @@ import ingpic from './images/ingredients.jpg';
 import Grid from '@material-ui/core/Grid';
 import JokeOrTrivia from './FindRecipe/JokeOrTrivia';
 import Search from './FindRecipe/Search';
+import { withStyles } from '@material-ui/core/styles';
+
 
 const initialState = {
     ingredients: [],
@@ -10,6 +12,13 @@ const initialState = {
     entryq: '',
     values:[],
   }
+
+  const styles = theme => ({
+    img: {
+      display: 'flex',
+      margin: 'auto'
+    },
+  });  
   
 class FindRecipe extends Component {
     constructor(){
@@ -58,12 +67,12 @@ class FindRecipe extends Component {
     render(){
 
     const {isFetching, entryq} = this.state;
-    
+    const { classes } = this.props;
 
     return(
       <Grid container spacing={4} justify="center" alignItems="center" style = {{textAlign: "center"}}>
         <Grid item xs={12}>
-            <img alt="ingredients" src={ingpic} style ={{width:'50%'}}/>
+            <img alt="ingredients" src={ingpic} className={classes.img} style ={{width:'50%'}}/>
             <h1>Whatchya working with?</h1>
             </Grid>
             <Grid item xs={12}>
@@ -77,4 +86,4 @@ class FindRecipe extends Component {
 }
 };
 
-export default FindRecipe
+export default withStyles(styles, {withTheme: true})(FindRecipe);
