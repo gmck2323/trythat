@@ -51,7 +51,7 @@ const Landing = () => {
                     </Link>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} className="cocktail">
                     <Paper elevation={0}><h1>Sample text here.
                     </h1><h2>Do you like drinking? Of course you do, who doesnt.
                         So lets find you the perfect drink with the ingredients you have.
@@ -60,7 +60,7 @@ const Landing = () => {
                     Coming Soon!
                     </Button>
                 </Grid>
-                <Grid item xs={12} sm={6} style={{background: '#E7E1E0'}}>
+                <Grid item xs={12} sm={6} style={{background: '#E7E1E0'}} className="cocktail">
                     <img alt="group-meal" src={drinks} className={classes.img} />
                 </Grid>
                 
